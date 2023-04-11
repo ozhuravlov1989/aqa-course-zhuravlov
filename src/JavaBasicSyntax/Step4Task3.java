@@ -14,6 +14,6 @@ public class Step4Task3 {
                 maxDivisor = i;
             }
         }
-        System.out.println(maxDivisor);
+        System.out.println("Largest divisor for " + a + " is " + maxDivisor);
     }
 }

@@ -1,6 +1,7 @@
 package JavaBasicSyntax;
 
 public class Step2Task2 {
+
     public static void main(String[] args) {
         int a = 12;
         System.out.println("Post increment - current value: " + a + ", used value: " + a++ + " " + "final value: " + a);

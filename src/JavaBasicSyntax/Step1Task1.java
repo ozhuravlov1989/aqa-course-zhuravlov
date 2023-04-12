@@ -1,6 +1,7 @@
 package JavaBasicSyntax;
 
 public class Step1Task1 {
+
     public static void main(String[] args) {
         byte byteVar = -128;
         short shortVar = 32767;

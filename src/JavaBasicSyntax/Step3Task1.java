@@ -10,12 +10,12 @@ public class Step3Task1 {
         System.out.print("Type any number: ");
         int a = scanner.nextInt();
 
-        if (a > 10) {
-            System.out.println("Number greater than 10");
-        } else if (a < 10 && a != 0) {
-            System.out.println("Number less than 10");
-        } else if (a == 0) {
+        if (a == 0) {
             System.out.println("Number is 0");
+        } else if (a < 10) {
+            System.out.println("Number less than 10");
+        } else if (a > 10) {
+            System.out.println("Number greater than 10");
         } else {
             System.out.println("Number is 10");
         }

@@ -8,21 +8,17 @@ public class Step4Task1 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Type any number: ");
         int a = scanner.nextInt();
-        int i = 0;
 
-        if (a < 0) {
+        if (a <= 0) {
             System.out.println("Error: Number must be greater than 0");
         } else {
-            while (i <= a) {
+            for (int i = 1; i <= a; i++) {
                 if (i % 2 == 0 && i % 3 != 0) {
-                    System.out.println("The number is even: " + i);
-                    i++;
+                    System.out.println("Value " + i + "\nThe value is even. " + "Value " + i);
                 } else if (i % 3 == 0) {
-                    System.out.println("The number multiple to 3");
-                    i++;
+                    System.out.println("The value is multiple to 3. " + "Value " + i);
                 } else {
-                    System.out.println(i);
-                    i++;
+                    System.out.println("Value " + i);
                 }
             }
         }

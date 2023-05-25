@@ -9,7 +9,6 @@ public class Cards {
     private String cardType;
 
     public Cards(String number, String expireDate, String cvv, String cardType) {
-
         this.number = number;
         this.expireDate = expireDate;
         this.cvv = cvv;

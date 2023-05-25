@@ -17,7 +17,6 @@ public class User {
     private boolean manager;
 
     public User(String firstName, String lastName, String email, String role) {
-
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

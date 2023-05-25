@@ -9,7 +9,6 @@ public class Role {
     private boolean deleteAll;
 
     public Role(String type) {
-
         this.type = type;
         switch (type) {
             case "Admin":

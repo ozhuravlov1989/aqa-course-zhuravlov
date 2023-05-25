@@ -7,7 +7,6 @@ public class Manager extends User {
     private String workPhoneNumber;
 
     public Manager(String firstName, String lastName, String email, String role, String position) {
-
         super(firstName, lastName, email, role);
         this.position = position;
         setManager(true);

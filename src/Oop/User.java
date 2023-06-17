@@ -25,24 +25,25 @@ public class User {
         id += 1;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) throws PhoneException {
+
         if (phoneNumber.startsWith("+")) {
             this.phoneNumber = phoneNumber;
         } else {
-            throw new IllegalArgumentException("Phone number should start with '+' symbol");
+            throw new PhoneException("Phone number should start with '+' symbol");
         }
     }
 
     public void setBillingAddress(String country, String city, String street, String building, String zipCode) {
-        this.billingAddress = new Address(country,city,street,building,zipCode);
+        this.billingAddress = new Address(country, city, street, building, zipCode);
     }
 
     public void setDeliveryAddress(String country, String city, String street, String building, String zipCode) {
-        this.billingAddress = new Address(country,city,street,building,zipCode);
+        this.billingAddress = new Address(country, city, street, building, zipCode);
     }
 
     public void setCards(String number, String expireDate, String cvv, String cardType) {
-        this.cards.add(new Cards(number,expireDate,cvv,cardType));
+        this.cards.add(new Cards(number, expireDate, cvv, cardType));
     }
 
     public void setManager(boolean manager) {
@@ -113,13 +114,13 @@ public class User {
     public void printUserInfo() {
         System.out.print(
                 "firstName='" + firstName + '\'' + "\n" +
-                "lastName='" + lastName + '\'' + "\n" +
-                "fullName='" + fullName + '\'' + "\n" +
-                "email='" + email + '\'' + "\n" +
-                "phoneNumber='" + phoneNumber + '\'' + "\n" +
-                "billingAddress='" + billingAddress + '\'' + "\n" +
-                "deliveryAddress='" + deliveryAddress + '\'' + "\n" +
-                "role='" + role + '\''
+                        "lastName='" + lastName + '\'' + "\n" +
+                        "fullName='" + fullName + '\'' + "\n" +
+                        "email='" + email + '\'' + "\n" +
+                        "phoneNumber='" + phoneNumber + '\'' + "\n" +
+                        "billingAddress='" + billingAddress + '\'' + "\n" +
+                        "deliveryAddress='" + deliveryAddress + '\'' + "\n" +
+                        "role='" + role + '\''
         );
     }
 }

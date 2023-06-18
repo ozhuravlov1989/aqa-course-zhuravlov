@@ -6,20 +6,24 @@ public class Cards {
     private String number;
     private String expireDate;
     private String cvv;
-    private String cardType;
+    private CardsType cardType;
 
     public Cards(String number, String expireDate, String cvv, String cardType) {
         this.number = number;
         this.expireDate = expireDate;
         this.cvv = cvv;
-
-        if (cardType.equals("Visa") || cardType.equals("MasterCard")) {
-            this.cardType = cardType;
-        } else {
-            throw new IllegalArgumentException("'Visa' or 'MasterCard' values allowed");
-        }
-
         id += 1;
+
+        switch (cardType) {
+            case "Visa":
+                this.cardType = CardsType.VISA;
+                break;
+            case "MasterCard":
+                this.cardType = CardsType.MASTERCARD;
+                break;
+            default:
+                throw new IllegalArgumentException("'Visa' or 'MasterCard' values allowed");
+        }
     }
 
     public String getNumber() {
@@ -46,12 +50,12 @@ public class Cards {
         this.cvv = cvv;
     }
 
-    public String getCardType() {
+    public CardsType getCardType() {
         return cardType;
     }
 
     public void setCardType(String cardType) {
-        this.cardType = cardType;
+        this.cardType = CardsType.valueOf(cardType);
     }
 
     public static int getId() {

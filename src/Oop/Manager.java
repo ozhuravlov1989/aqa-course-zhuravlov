@@ -37,7 +37,7 @@ public class Manager extends User {
     }
 
     @Override
-    public void printUserInfo() {
+    public void printInfo() {
         System.out.print(
                 "firstName='" + getFirstName() + '\'' + "\n" +
                 "lastName='" + getLastName() + '\'' + "\n" +
